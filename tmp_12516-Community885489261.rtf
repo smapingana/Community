@@ -1,0 +1,188 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang7177{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 6.3.9600}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 <!DOCTYPE html>\par
+<html>\par
+<head>\par
+<meta name="viewport" content="width=device-width, initial-scale=1">\par
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">\par
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>\par
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>\par
+<style> .ui-bar-f \{ color: AliceBlue; background-color: chocolate \}\par
+</style>\par
+</head>\par
+<body>\par
+<div data-role="page" id="pageone">\par
+  <div data-role="panel" id="myPanel"> \par
+    <p><b>Click on the equipment to \par
+        report:</b></p>\par
+    <a href="#drnk" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-btn-corner-all ui-shadow-all"><span style="color:blue";>Drinking Water</span></a>\par
+<a href="#wp" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-btn-corner-all ui-shadow"><span style="color:blue";>Drinking Water Pipes</span></a>\par
+<a href="#drksrt" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-btn-coner-all ui-shadow"><span style="color:blue";>Dark Street / Area</span></a>\par
+<a href="#electr" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-btn-corner-all ui-shadow-all"><span style="color:blue";>Electrical</span></a>\par
+<a href="#pthls" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-corner-all ui-shadow"><span style="color:blue";>Potholes</a>\par
+<a href="#swrg" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-corner-all ui-shadow"><span style="color:blue";>Swerage</span></a>\par
+<a href="#rds" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-corner-all ui-shadow"><span style="color:blue";>Roads</span></a>\par
+<a href="#trfc" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-corner-all ui-shadow"><span style="color:blue";>Traffic Lights</span></a>\par
+</div> \par
+\par
+<div data-role="header" data-theme="f">\par
+    <h1>Community</h1>\par
+ </div>\par
+\par
+ <div data-role="main" class="ui-content">\par
+    <p><b>Click on the <span style="color:red";>R</span>eport button \par
+        to report damaged infrastructure :</b></p>\par
+    <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow"><span style="color:red";>R</span>eport</a>\par
+<div data-role="footer" data-theme="f">\par
+<h1>My community. Our planet!</h1>\par
+  </div>\par
+<div data-role="popup" id="drnk">\par
+<div data-role="main" class="ui-content">\par
+<form method="post">\par
+<fieldset data-role="controlgroup">\par
+<legend><b>Select affected service :</b></legend> <br />\par
+<label for="drnkw" id="drnkw">No Drinking Water in my Residance</label><input type="checkbox" name="drnkw" id="drnkw">\par
+<div class="ui-field-contain">\par
+<label for ="adress" id="address">Address :</label>  \par
+<textarea name="address" id="address"></textarea>\par
+</div>\par
+<div class="ui-field-contain">\par
+<label for="other" id="other">Other :</label>\par
+<textarea name="other" id="other"></textarea>\par
+<div data-role="footer" data-theme="f">\par
+<h1>My community. Our planet!</h1>\par
+</form>\par
+</div>\par
+<div data-role="popup" id="wp">\par
+<div data-role="main" class="ui-content">\par
+<form method="post">\par
+<fieldset data-role="controlgroup">\par
+<legend><b>Select affected service :</b></legend>\par
+<label for="brknwp" id="brknwp">Burst Water Pipe</label>\par
+<input type="checkbox" name="brknwp" id="brknwp">\par
+<div class="ui-field-contain">\par
+<label for="address" id="address">Address :</label>\par
+<textarea name="address" id="address"></textarea>\par
+<label for="other" id="other">Other :</label>\par
+<textarea name="other" id="other"></textarea>\par
+<div data-role="footer" data-theme="f">\par
+<h1>My community. Our planet!</h1>\par
+</form>\par
+</div>\par
+<div data-role="popup" id="drksrt">\par
+<div data-role="main" class="ui-content">\par
+<form method="post">\par
+<fieldset data-role="controlgroup">\par
+<legend><b>Select affected service :</b></legend><br />\par
+<label for="dstr" id="dstr">Dark and Unsafe Street / Area</label>\par
+<input type="checkbox" name="dstr" id="dstr">\par
+<div class="ui-field-contain">\par
+<label for="address" id="address">Address :</label>\par
+<textarea name="address" id="address"></textarea>\par
+<label for="other" id="other">Other :</label>\par
+<textarea name="other" id="other"></textarea>\par
+<div data-role="footer" data-theme="f">\par
+<h1>My community. Our planet!</h1>\par
+</form>\par
+</div>\par
+<div data-role="popup" id="electr">\par
+<div data-role="main" class="ui-content">\par
+<form method="post">\par
+ <fieldset data-role="controlgroup"> \par
+<legend><b>Select affected service :</b></legend><br />\par
+<label for="electr" id="electr">No Electricity in my Household</label>\par
+ <input type="checkbox" name="electr" id="electr"> \par
+<label for="electr1" id="electr1">Faulty Street Light/s</label>\par
+<input type="checkbox" name="electr1" id="electr1">\par
+<label for="electr2" id="elctr2">Exposed Electrical Cables</label>\par
+<input type="checkbox" name="electr2" id="electr2">\par
+<label for="electr3" id="electr3">Dameged Electrical Sub station</label> \par
+<input type="checkbox" name="electr3" id ="electr3">\par
+<div class="ui-field-contain"> \par
+<label for="address" id="address">Address :</label> \par
+<textarea name="address" id="address"></textarea> \par
+<label for="other" id="other">Other :</label>\par
+ <textarea name="other" id="other"></textarea> \par
+<div data-role="footer" data-theme="f">\par
+<h1>My community. Our planet!</h1>\par
+</form>\par
+</div>\par
+<div data-role="popup" id="pthls">\par
+<div data-role="main" class="ui-content">\par
+ <form method="post">\par
+ <fieldset data-role="controlgroup">\par
+ <legend><b>Select affected service :</b></legend><br /> \par
+<label for="pthls" id="pthls">Dangerous Pothole/s on the Road</label><input type="checkbox" name="pthls" id="pthls"> \par
+<div class="ui-field-contain"> \par
+<label for ="address" id="address">Address :</label>\par
+ <textarea name="address" id="address"></textarea>\par
+ <div class="ui-field-contain">\par
+ <label for="other" id="other">Other :</label> \par
+<textarea name="other" id="other"></textarea> \par
+<div data-role="footer" data-theme="f">\par
+<h1>My community. Our planet!</h1>\par
+</form> \par
+</div> \par
+<div data-role="popup" id="swrg">\par
+<div data-role="main" class="ui-content">\par
+<form method="post">\par
+<fieldset data-role="controlgroup">\par
+<legend><b>Select the affected service :</label>\par
+<label for="swrg" id="swrg">Overflowing Swerage in my Household</label>\par
+<input type="checkbox" name="swrg" id="swrg">\par
+<label for="swrg1" id="swrg1">Overflowing Swerage in the Street</label>\par
+<input type="checkbox" name="swrg1" id="swrg1">\par
+<div class="ui-field-contain">\par
+<label for="address" id="address">Address :</label>\par
+<textarea name="address" id="address"></textarea>\par
+<label for="other" id="other">Other :</label>\par
+<textarea name="other" id="other"></textarea>\par
+</form>\par
+</div>\par
+<div data-role="footer" data-theme="f">\par
+<h1>My community. Our planet!</h1>\par
+</form>\par
+</div\par
+<div data-role="popup" id="rds">\par
+<div data-role="main" class="ui-content">\par
+<form method="post">\par
+<fieldset data-role="controlgroup">\par
+<legend><b>Select the affected service :</b><legend><br />\par
+<label for="rds" id="rds">Accident Hot-spot Road</label>\par
+<input type="checkbox" name="rds" id="rds">\par
+<label for="rds1" name="rds1">Uneaven Road</label>\par
+<input type="checkbox" name="rds1" id="rds1">\par
+<div data-role="ui-field-contain">\par
+<label for="address" id="address">Address :</label>\par
+<textarea name="address" id="address"></textarea>\par
+<label for="other" id="other">Other :</label>\par
+<textarea name="other" id="other"></textarea>\par
+<div data-role="footer" data-theme="f">\par
+<h1>My community. Our planet!</h1>\par
+</form>\par
+</div>\par
+<div data-role="popup" id="trfc">\par
+<div data-role="main" class="ui-content">\par
+<form method="post">\par
+<fieldset data-role="controlgroup">\par
+<legend><b>Select the affected service :</b></legend><br />\par
+<label for="trfc" name="trfc" id="trfc">Faulty Traffic Light/s</label>\par
+<input type="checkbox" name="trfc" id="trfc">\par
+<label for="trfc1" id="trfc1">Traffic Light/s always Off</label>\par
+<input type="checkbox" name="trfc1" id="trfc1">\par
+<div data-role="ui-field-contain">\par
+<label for="address" id="address">Address :</label>\par
+<textarea name="address" id="address"></textarea>\par
+<div data-role="ui-field-contain">\par
+<label for="other" id="other">Other :</label>\par
+<textarea name="other" id="other"></textarea>\par
+</form>\par
+</div>\par
+<div data-role="footer" data-theme="f">\par
+<h1>My community. Our planet!</h1>\par
+</body>\par
+</div>\par
+</div>\par
+</html>\par
+}
+ 
