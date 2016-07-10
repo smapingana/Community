@@ -13,6 +13,7 @@
    </author>
    
    <preference name = "permissions" value = "none"/>
+<plugin name="de.appplant.cordova.plugin.email-composer" spec="0.8.2" source="pgb" />
    
    <icon src = "res/icon/android/drawable-ldpi/tp_icon.png" 
       gap:platform = "android" gap:qualifier = "ldpi" />
