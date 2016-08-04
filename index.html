@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Community</title>
+  <script>
+    $(document).ready(function() {
+  $.ajaxSetup({ cache: true });
+  $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
+    FB.init({
+      appId: '{your-app-id}',
+      version: 'v2.7' // or v2.1, v2.2, v2.3, ...
+    });     
+    $('#loginbutton,#feedbutton').removeAttr('disabled');
+    FB.getLoginStatus(updateStatusCallback);
+  });
+});
+  </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -28,7 +44,7 @@
  </div>
 
  <div data-role="main" class="ui-content">
-    <p><b>Click on the <span style="color:red";>R</span>eport button 
+    <p><b>Click on the <span style="color:green";>R</span>eport button 
         to report damaged infrastructure :</b></p>
     <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow"><span style="color:red";>R</span>eport</a>
 <div data-role="footer" data-theme="f">
