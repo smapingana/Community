@@ -1,184 +1,203 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<style> .ui-bar-f { color: AliceBlue; background-color: chocolate }
-</style>
-</head>
-<body>
-<div data-role="page" id="pageone">
-  <div data-role="panel" id="myPanel"> 
-    <p><b>Click on the equipment to 
-        report:</b></p>
-    <a href="#drnk" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-btn-corner-all ui-shadow-all"><span style="color:blue">Drinking Water</span></a>
-<a href="#wp" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-btn-corner-all ui-shadow"><span style="color:blue">Drinking Water Pipes</span></a>
-<a href="#drksrt" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-btn-coner-all ui-shadow"><span style="color:blue">Dark Street / Area</span></a>
-<a href="#electr" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-btn-corner-all ui-shadow-all"><span style="color:blue">Electrical</span></a>
-<a href="#pthls" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-corner-all ui-shadow"><span style="color:blue">Potholes</span></a>
-<a href="#swrg" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-corner-all ui-shadow"><span style="color:blue">Swerage</span></a>
-<a href="#rds" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-corner-all ui-shadow"><span style="color:blue">Roads</span></a>
-<a href="#trfc" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-corner-all ui-shadow"><span style="color:blue">Traffic Lights</span></a>
-</div> 
+  <head>
+    <meta charset="UTF-8">
+    <title>Reporter</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div data-role="header" data-theme="f">
-    <h1>Community</h1>
- </div>
+    <style>
+      body {
+        background-color: GhostWhite;
+        color: black;
+        font-family: sans-serif;
+        font-size: 16px;
+        margin: 1px;
+        padding: 20px;
+      }
+      
+      h1 {
+        text-align: center;
+        background: linear-gradient(to right, #009900, lime);
+        color: white;
+        padding: 4px;
+        text-decoration: none;
+      }
 
- <div data-role="main" class="ui-content">
-    <p><b>Click on the <span style="color:red";>R</span>eport button 
-        to report damaged infrastructure :</b></p>
-    <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow"><span style="color:red";>R</span>eport</a>
-<div data-role="footer" data-theme="f">
-<h1>My community. Our planet!</h1>
-  </div>
-<div data-role="popup" id="drnk">
-<div data-role="main" class="ui-content">
-<form method="post">
-<fieldset data-role="controlgroup">
-<legend><b>Select affected service :</b></legend> <br />
-<label for="drnkw" id="drnkw">No Drinking Water in my Residance</label><input type="checkbox" name="drnkw" id="drnkw">
-<div class="ui-field-contain">
-<label for ="adress" id="address">Address :</label> 
-<textarea name="address" id="address"></textarea>
-</div>
-<div class="ui-field-contain">\par
-<label for="other" id="other">Other :</label>
-<textarea name="other" id="other"></textarea>
-<div data-role="footer" data-theme="f">
-<h1>My community. Our planet!</h1>
-</form>
-</div>
-<div data-role="popup" id="wp">
-<div data-role="main" class="ui-content">
-<form method="post">
-<fieldset data-role="controlgroup">
-<legend><b>Select affected service :</b></legend>
-<label for="brknwp" id="brknwp">Burst Water Pipe</label>
-<input type="checkbox" name="brknwp" id="brknwp">
-<div class="ui-field-contain">
-<label for="address" id="address">Address :</label>
-<textarea name="address" id="address"></textarea>
-<label for="other" id="other">Other :</label>
-<textarea name="other" id="other"></textarea>
-<div data-role="footer" data-theme="f">
-<h1>My community. Our planet!</h1>
-</form>
-</div>
-<div data-role="popup" id="drksrt">
-<div data-role="main" class="ui-content">
-<form method="post">
-<fieldset data-role="controlgroup">
-<legend><b>Select affected service :</b></legend><br />
-<label for="dstr" id="dstr">Dark and Unsafe Street / Area</label>
-<input type="checkbox" name="dstr" id="dstr">
-<div class="ui-field-contain">
-<label for="address" id="address">Address :</label>
-<textarea name="address" id="address"></textarea>
-<label for="other" id="other">Other :</label>
-<textarea name="other" id="other"></textarea>
-<div data-role="footer" data-theme="f">
-<h1>My community. Our planet!</h1>
-</form>
-</div>
-<div data-role="popup" id="electr">
-<div data-role="main" class="ui-content">
-<form method="post">
- <fieldset data-role="controlgroup"> 
-<legend><b>Select affected service :</b></legend><br />
-<label for="electr" id="electr">No Electricity in my Household</label>
- <input type="checkbox" name="electr" id="electr"> \par
-<label for="electr1" id="electr1">Faulty Street Light/s</label>
-<input type="checkbox" name="electr1" id="electr1">
-<label for="electr2" id="elctr2">Exposed Electrical Cables</label>
-<input type="checkbox" name="electr2" id="electr2">
-<label for="electr3" id="electr3">Dameged Electrical Sub station</label> 
-<input type="checkbox" name="electr3" id ="electr3">\par
-<div class="ui-field-contain">
-<label for="address" id="address">Address :</label> 
-<textarea name="address" id="address"></textarea> 
-<label for="other" id="other">Other :</label>
- <textarea name="other" id="other"></textarea> 
-<div data-role="footer" data-theme="f">
-<h1>My community. Our planet!</h1>
-</form>
-</div>
-<div data-role="popup" id="pthls">
-<div data-role="main" class="ui-content">
- <form method="post">
- <fieldset data-role="controlgroup">
- <legend><b>Select affected service :</b></legend><br /> 
-<label for="pthls" id="pthls">Dangerous Pothole/s on the Road</label><input type="checkbox" name="pthls" id="pthls"> 
-<div class="ui-field-contain"> 
-<label for ="address" id="address">Address :</label>
- <textarea name="address" id="address"></textarea>
- <div class="ui-field-contain">\par
- <label for="other" id="other">Other :</label> 
-<textarea name="other" id="other"></textarea> 
-<div data-role="footer" data-theme="f">
-<h1>My community. Our planet!</h1>
-</form> 
-</div> 
-<div data-role="popup" id="swrg">
-<div data-role="main" class="ui-content">
-<form method="post">
-<fieldset data-role="controlgroup">
-<legend><b>Select the affected service :</label>
-<label for="swrg" id="swrg">Overflowing Swerage in my Household</label>
-<input type="checkbox" name="swrg" id="swrg">
-<label for="swrg1" id="swrg1">Overflowing Swerage in the Street</label>
-<input type="checkbox" name="swrg1" id="swrg1">
-<div class="ui-field-contain">
-<label for="address" id="address">Address :</label>
-<textarea name="address" id="address"></textarea>
-<label for="other" id="other">Other :</label>
-<textarea name="other" id="other"></textarea>
-</form>
-</div>
-<div data-role="footer" data-theme="f">
-<h1>My community. Our planet!</h1>
-</form>
-</div>
-<div data-role="popup" id="rds">
-<div data-role="main" class="ui-content">
-<form method="post">
-<fieldset data-role="controlgroup">
-<legend><b>Select the affected service :</b><legend><br />
-<label for="rds" id="rds">Accident Hot-spot Road</label>\par
-<input type="checkbox" name="rds" id="rds">
-<label for="rds1" name="rds1">Uneaven Road</label>
-<input type="checkbox" name="rds1" id="rds1">
-<div data-role="ui-field-contain">
-<label for="address" id="address">Address :</label>
-<textarea name="address" id="address"></textarea>
-<label for="other" id="other">Other :</label>
-<textarea name="other" id="other"></textarea>
-<div data-role="footer" data-theme="f">
-<h1>My community. Our planet!</h1>
-</form>
-</div>
-<div data-role="popup" id="trfc">
-<div data-role="main" class="ui-content">
-<form method="post">
-<fieldset data-role="controlgroup">
-<legend><b>Select the affected service :</b></legend><br />
-<label for="trfc" name="trfc" id="trfc">Faulty Traffic Light/s</label>
-<input type="checkbox" name="trfc" id="trfc">
-<label for="trfc1" id="trfc1">Traffic Light/s always Off</label>
-<input type="checkbox" name="trfc1" id="trfc1">
-<div data-role="ui-field-contain">
-<label for="address" id="address">Address :</label>
-<textarea name="address" id="address"></textarea>
-<div data-role="ui-field-contain">
-<label for="other" id="other">Other :</label>
-<textarea name="other" id="other"></textarea>
-</form>
-</div>
-<div data-role="footer" data-theme="f">
-<h1>My community. Our planet!</h1>
-</body>
-</div>
-</div>
+      header h1 {
+        display: inline-block;
+        margin: 0;
+       text-align: center;
+        background: linear-gradient(to right, #009900, lime);
+        color: white;
+        padding: 4px;
+        text-decoration: none;
+      }
+
+nav {
+        display: inline-block;
+        margin-left: 20px;
+        text-decoration: none;
+      }
+
+      
+      nav a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      
+      table {
+        border-collapse: collapse;
+        margin: auto;
+      }
+      
+      th {
+        background-color: #009900;
+        color: white;
+        padding: 10px;
+        text-align: left;
+      }
+      
+      td {
+        padding: 5px;
+      }
+      
+      form input[type="text"] {
+        border-radius: 5px;
+        padding: 10px;
+        margin: 5px;
+        font-size: "16px"
+      }
+      
+      nav{ 
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 0px 0px;
+      } 
+
+      .dropdown-menu { 
+        position: absolute; 
+        top: 50px; 
+        left: 0; 
+        width: 150px;  
+        border: 1px solid #ddd; 
+        z-index:1; 
+        display: none; 
+        text-decoration: none; 
+        color: 
+      } 
+
+      .dropdown:hover .dropdown-menu { 
+        display: block; 
+        background-color: GhostWhite;
+      }
+
+      .dropdown-menu a { 
+        display: block; 
+        padding: 10px; 
+        color: black;
+        text-decoration: none; 
+      
+      } 
+
+      .dropdown-menu a:hover { 
+        background-color: #009900; 
+      } 
+
+      .button {
+        background-color: #009900;
+        color: white;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        margin: 10px;
+        cursor: pointer;
+        font: 16px;
+        color: white;
+      }
+
+      footer {
+        text-align: center;
+        background: linear-gradient(to right, #009900, lime);
+        color: white;
+        padding: 4px;
+        position: bottom;
+        bottom: 0;
+        width: 100%;
+      }
+
+
+  div p {
+    margin: 10px 0;
+    font-size:16px
+  }
+
+  div ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  div li {
+    margin: 10px 0;
+  }
+
+  div li label {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  div input[type="text"],
+  div textarea,
+  div input[type="date"],
+  div input[type="time"] {
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border: 1px solid #ddd;
+  }
+    textarea {
+     border-radius: 5px;
+
+ </style>
+  </head>
+  <body>
+    <h1>Reporter</h1>
+
+    <h2>Household</h2>
+    <p><input type="checkbox"> No Drinking Water in my Residence</p>
+    <p><input type="checkbox"> Burst Water Pipes in my Residence</p>
+    <p><input type="checkbox"> No Electricity my Residance</p>
+    <p><input type="checkbox"> Overflowing Sewage in my Household</p>
+<textarea name="other" rows="5" cols="30" placeholder="You may add more details and location."></textarea>
+</br>
+
+    <h2>Community</h2>
+    <p><input type="checkbox"> Burst Water Pipes in the Street</p>
+    <p><input type="checkbox"> Dark Street</p>
+    <p><input type="checkbox"> Unsafe Street</p>
+    <p><input type="checkbox"> Faulty Street Light/s</p>
+    <p><input type="checkbox"> Unsafe Conditions for Residents</p>
+    <p><input type="checkbox"> Unsafe Conditions for Children</p>
+    <p><input type="checkbox"> Overflowing Sewage in the Street</p>
+    <p><input type="checkbox"> Exposed Electrical Cables in the Street</p>
+    <p><input type="checkbox"> Damaged Substation</p>
+<textarea name="other" rows="5" cols="30" placeholder="You may add more details and location."></textarea>
+</br>
+
+    <h2>Road Conditions</h2>
+    <p><input type="checkbox"> Unsafe Road Conditions</p>
+    <p><input type="checkbox"> Pot Holes on the Road</p>
+    <p><input type="checkbox"> Accident Hotspot</p>
+    <p><input type="checkbox"> Faulty Street Lights</p>
+    <p><input type="checkbox"> Dangerous Driving</p>
+    <p><input type="checkbox"> Uneven Road</p>
+<textarea name="other" rows="5" cols="30" placeholder="You may add more details and location."></textarea>
+</br></br>
+<footer>
+Reporter 
+</footer>
+  </body>
 </html>
